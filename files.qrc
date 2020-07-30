@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>datafiles/cub.3ds</file>
+        <file>datafiles/plane.3DS</file>
+        <file>datafiles/box.bmp</file>
+        <file>datafiles/cub2.3DS</file>
+        <file>datafiles/cube.bmp</file>
+        <file>datafiles/cube.jpg</file>
+        <file>datafiles/cube.png</file>
+        <file>datafiles/cube1.png</file>
+        <file>datafiles/cube1_n.png</file>
+        <file>datafiles/cube2.png</file>
+        <file>datafiles/cube2_n.png</file>
+        <file>datafiles/cube3.png</file>
+        <file>datafiles/cube3_n.png</file>
+        <file>datafiles/floor.bmp</file>
+        <file>datafiles/images.jfif</file>
+        <file>datafiles/propeller.3DS</file>
+        <file>datafiles/sky.jpg</file>
+        <file>datafiles/skybox — копия.jpg</file>
+        <file>datafiles/skybox.fsh</file>
+        <file>datafiles/skybox.jpg</file>
+        <file>datafiles/skybox.vsh</file>
+        <file>datafiles/skybox2.jpg</file>
+        <file>datafiles/skybox2.png</file>
+        <file>datafiles/skybox3.png</file>
+        <file>datafiles/cube_n.jpg</file>
+        <file>datafiles/3d_44703-383.jpg</file>
+        <file>datafiles/cilinder.jpg</file>
+        <file>datafiles/cone.jpg</file>
+        <file>datafiles/cub.jpg</file>
+        <file>datafiles/sphere.jpg</file>
+        <file>datafiles/Monster.3DS</file>
+        <file>datafiles/stone.3DS</file>
+        <file>datafiles/stonemin.3DS</file>
+        <file>datafiles/Rock_7_Tex/Rock_7_Base_Color.jpg</file>
+        <file>datafiles/Rock_7_Tex/Rock_7_Mixed_AO.jpg</file>
+        <file>datafiles/Rock_7_Tex/Rock_7_Normal.jpg</file>
+        <file>datafiles/Rock_7_Tex/Rock_7_Specular.jpg</file>
+        <file>datafiles/kirpich.jpg</file>
+        <file>datafiles/kirpich_normal.jpg</file>
+        <file>datafiles/skull.3DS</file>
+        <file>datafiles/megalodon.3DS</file>
+        <file>datafiles/megalodon.png</file>
+        <file>datafiles/megaladon2.3DS</file>
+    </qresource>
+</RCC>
