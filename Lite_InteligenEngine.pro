@@ -133,24 +133,16 @@ SOURCES += \
     GLWidget.cpp \
     main.cpp \
     mainwindow.cpp \
-    scene_unit/IGizmo/IGizmoTransformMove.cpp \
-    scene_unit/IGizmo/IGizmoTransformRender.cpp \
-    scene_unit/IGizmo/IGizmoTransformRotate.cpp \
-    scene_unit/IGizmo/IGizmoTransformScale.cpp \
-    scene_unit/IGizmoManipulator.cpp \
-    scene_unit/OpenGL/OpenGLRender.cpp \
-    scene_unit/OpenGL/geometry_opengl.cpp \
-#    scene_unit/SceneCreator.cpp \
-#    scene_unit/SceneCubeRubics.cpp \
-#    scene_unit/SceneDemo.cpp \
-#    scene_unit/SceneHierarchy.cpp \
-#    scene_unit/ScenePanoramaCameras.cpp \
-#    scene_unit/SceneRayCasting.cpp \
-#    scene_unit/SceneRobocar.cpp \
-#    scene_unit/SceneTestCollision.cpp \
-    scene_unit/SceneEngine.cpp \
-    scene_unit/SceneMain.cpp \
-    scene_unit/Shader/Shader.cpp
+    Scene/IGizmo/IGizmoTransformMove.cpp \
+    Scene/IGizmo/IGizmoTransformRender.cpp \
+    Scene/IGizmo/IGizmoTransformRotate.cpp \
+    Scene/IGizmo/IGizmoTransformScale.cpp \
+    Scene/IGizmoManipulator.cpp \
+    Scene/OpenGL/OpenGLRender.cpp \
+    Scene/OpenGL/geometry_opengl.cpp \
+    Scene/SceneEngine.cpp \
+    Scene/SceneMain.cpp \
+    Scene/Shader/Shader.cpp
 
 HEADERS += \
     Engine/IAlgorithm/GJK-EPA/IGjkEpa.h \
@@ -276,27 +268,19 @@ HEADERS += \
     EngineComponent/IMaterial.h \
     GLWidget.h \
     mainwindow.h \
-    scene_unit/IGizmo/IGizmoTransform.h \
-    scene_unit/IGizmo/IGizmoTransformMove.h \
-    scene_unit/IGizmo/IGizmoTransformRender.h \
-    scene_unit/IGizmo/IGizmoTransformRotate.h \
-    scene_unit/IGizmo/IGizmoTransformScale.h \
-    scene_unit/IGizmo/IMathGizmo.h \
-    scene_unit/IGizmo/IUGizmo.h \
-    scene_unit/IGizmoManipulator.h \
-    scene_unit/OpenGL/OpenGLRender.h \
-    scene_unit/OpenGL/geometry_opengl.h \
-#    scene_unit/SceneCreator.h \
-#    scene_unit/SceneCubeRubics.h \
-#    scene_unit/SceneDemo.h \
-#    scene_unit/SceneHierarchy.h \
-#    scene_unit/ScenePanoramaCameras.h \
-#    scene_unit/SceneRayCasting.h \
-#    scene_unit/SceneRobocar.h \
-#    scene_unit/SceneTestCollision.h \
-    scene_unit/SceneEngine.h \
-    scene_unit/SceneMain.h \
-    scene_unit/Shader/Shader.h
+    Scene/IGizmo/IGizmoTransform.h \
+    Scene/IGizmo/IGizmoTransformMove.h \
+    Scene/IGizmo/IGizmoTransformRender.h \
+    Scene/IGizmo/IGizmoTransformRotate.h \
+    Scene/IGizmo/IGizmoTransformScale.h \
+    Scene/IGizmo/IMathGizmo.h \
+    Scene/IGizmo/IUGizmo.h \
+    Scene/IGizmoManipulator.h \
+    Scene/OpenGL/OpenGLRender.h \
+    Scene/OpenGL/geometry_opengl.h \
+    Scene/SceneEngine.h \
+    Scene/SceneMain.h \
+    Scene/Shader/Shader.h
 
 FORMS += \
     mainwindow.ui
