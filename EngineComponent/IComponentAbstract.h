@@ -7,7 +7,7 @@
 #include <QOpenGLTexture>
 #include "IMaterial.h"
 
-#include "../scene_unit/Shader/Shader.h"
+#include "../Scene/Shader/Shader.h"
 
 using namespace IMath;
 using namespace IEngine;
