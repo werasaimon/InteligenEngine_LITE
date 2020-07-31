@@ -1,3 +1,3 @@
 # InteligenEngine_LITE
 
-![alt text](bandicam 2020-07-31 03-50-36-209.jpg "Описание будет тут") /
+![title](bandicam 2020-07-31 03-50-36-209.jpg "Описание будет тут") 
