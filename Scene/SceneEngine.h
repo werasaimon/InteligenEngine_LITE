@@ -150,7 +150,7 @@ public:
 private:
 
     void renderShadows();
-    void renderGizmo(IComponentCamera *_camera);
+    void renderGizmo(IComponentCamera *_camera , float _width , float _height);
     void renderLines(IComponentCamera *_camera , float _width , float _height);
     void renderShader(IComponentCamera *_camera , float _width , float _height , GLShaderProgram* _ProgramShader, bool is_look_at);
 

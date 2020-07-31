@@ -267,6 +267,8 @@ void SceneEngine::render(float FrameTime)
     mCamera->BeginLookAt();
 
 
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     if(mSceneDscriptor.m_IsDrawLines)
     {
         renderLines(mCamera,mWidth,mHeight);
@@ -282,7 +284,7 @@ void SceneEngine::render(float FrameTime)
 
     //--------------------------------------------------------------------------//
 
-    renderGizmo(mCamera);
+    renderGizmo(mCamera,mWidth,mHeight);
 
     //--------------------------------------------------------------------------//
 
@@ -295,6 +297,7 @@ void SceneEngine::renderShadows()
     glEnable(GL_CULL_FACE);
     glCullFace(GL_FRONT);
     glEnable(GL_DEPTH_TEST);
+
 
     // отрисовка во фреймбуфер
     if(mSceneDscriptor.m_IsDrawShadow) // отрисовка теней
@@ -347,8 +350,20 @@ void SceneEngine::renderShadows()
     }
 }
 
-void SceneEngine::renderGizmo(IComponentCamera *_camera)
+void SceneEngine::renderGizmo(IComponentCamera *_camera, float _width , float _height)
 {
+    glCullFace(GL_BACK);
+    glEnable(GL_DEPTH_TEST);
+    glViewport(0, 0, _width, _height);
+    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
+    glLoadIdentity();
+    glMatrixMode(GL_PROJECTION);
+    glLoadMatrixf(_camera->getCamera2().ProjectionMatrix());
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadMatrixf(_camera->getCamera2().ViewMatrix());
 
     if (mGizmoManipulator->GetGizmo())
     {
@@ -362,14 +377,16 @@ void SceneEngine::renderGizmo(IComponentCamera *_camera)
             glLineWidth(1);
         }
     }
+
+   glLoadIdentity();
 }
 
 void SceneEngine::renderLines(IComponentCamera *_camera , float _width , float _height)
 {
     glCullFace(GL_BACK);
     glEnable(GL_DEPTH_TEST);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glViewport(0, 0, _width, _height);
+    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glLoadIdentity();
     glMatrixMode(GL_PROJECTION);
@@ -425,18 +442,16 @@ void SceneEngine::renderLines(IComponentCamera *_camera , float _width , float _
         //-------------------------------------------------------------//
     }
 
-   // glFlush();
+    glLoadIdentity();
+    glFlush();
 }
 
 void SceneEngine::renderShader(IComponentCamera *_camera, float _width, float _height, GLShaderProgram *_ProgramShader , bool is_look_at)
 {
     glCullFace(GL_BACK);
     glEnable(GL_DEPTH_TEST);
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glViewport(0, 0, _width , _height);
-
-
-    if(is_look_at) _camera->BeginLookAt();
+    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
     //----------------------------------------------------------------------------//
@@ -544,7 +559,8 @@ void SceneEngine::renderShader(IComponentCamera *_camera, float _width, float _h
     _ProgramShader->release();
     //--------------------------------------------------//
 
-    //glFlush();
+    glLoadIdentity();
+    glFlush();
 }
 
 void SceneEngine::update()
